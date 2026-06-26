@@ -1,32 +1,53 @@
-<build>
-    <plugins>
+<?xml version="1.0" encoding="UTF-8"?>
 
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-antrun-plugin</artifactId>
-            <version>3.1.0</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-            <executions>
-                <execution>
-                    <id>demo</id>
-                    <phase>validate</phase>
+    <modelVersion>4.0.0</modelVersion>
 
-                    <goals>
-                        <goal>run</goal>
-                    </goals>
+    <groupId>io.github.digital-ecmt</groupId>
+    <artifactId>acuity-flyway</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
 
-                    <configuration>
-                        <target>
-                            <echo message="================================="/>
-                            <echo message="Bugbounty by @nvk0x"/>
-                            <echo message="================================="/>
-                        </target>
-                    </configuration>
+    <name>acuity-flyway</name>
+    <description>Sample Maven project</description>
 
-                </execution>
-            </executions>
+    <build>
+        <plugins>
 
-        </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
 
-    </plugins>
-</build>
+                <executions>
+                    <execution>
+                        <id>hello-world</id>
+                        <phase>validate</phase>
+
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+
+                        <configuration>
+                            <target>
+                                <echo message="=========================================="/>
+                                <echo message="Hello World"/>
+                                <echo message="Repository: acuity-flyway"/>
+                                <echo message="Version: 1.0.0"/>
+                                <echo message="=========================================="/>
+                            </target>
+                        </configuration>
+
+                    </execution>
+                </executions>
+
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
